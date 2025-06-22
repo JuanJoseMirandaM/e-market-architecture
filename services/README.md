@@ -3,23 +3,21 @@
 ## Descripción del Proyecto
 Sistema de comercio electrónico que gestiona la venta de productos y servicios de múltiples proveedores externos, permitiendo a los clientes navegar, comprar y realizar seguimiento de pedidos en tiempo real.
 
-## Tabla Comparativa: Características vs Estilos Arquitectónicos
+## Recomendación de Estilo Arquitectónico
 
-
-
-## Recomendación Arquitectónica
-
-**Arquitectura Híbrida: Microservicios + Event-Driven**
+**Microservicios + Event-Driven (EDA) + Clean architecture**
 
 ### Justificación:
 1. **Microservicios** para la descomposición funcional y escalabilidad independiente
 2. **Event-Driven** para la orquestación de procesos complejos y comunicación asíncrona
+3. **Clean Architecture** para aislar la lógica de negocio de los detalles técnicos, mejorar la testabilidad y facilitar el cambio de tecnologías (bases de datos, brokers, frameworks) sin impactar el núcleo del sistema, prolongando la vida útil y la mantenibilidad del código.
 
 ## Estructura del Proyecto
 
 ```
 services/
 ├── README.md
+├── ARQUITECT.md
 ├── infrastructure.md
 ├── catalog-service/
 ├── cart-service/
@@ -153,22 +151,11 @@ microservice-name/
 ### Síncrona (REST)
 - Consultas inmediatas entre servicios
 - Validaciones en tiempo real
-- Operaciones críticas que requieren respuesta inmediata
 
 ### Asíncrona (Eventos)
 - Notificaciones de cambios de estado
-- Procesamiento en segundo plano
-- Integración de datos entre servicios
+- Envio de correos.
 
-### Eventos Principales
-
-## Patrones Implementados
-
-1. **Hexagonal Architecture**: Separación clara entre dominio e infraestructura
-2. **Event Sourcing**: Para auditoría en order-service y payment-service
-3. **Saga Pattern**: Transacciones distribuidas para el flujo de compra
-4. **Circuit Breaker**: Resiliencia en llamadas entre servicios
-5. **API Gateway**: Punto de entrada único para clientes externos
 
 ## Tecnologías por Capa
 
