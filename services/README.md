@@ -22,32 +22,39 @@ services/
 ├── README.md
 ├── infrastructure.md
 ├── catalog-service/
-├── commerce-service/
+├── cart-service/
+├── inventory-service/
 ├── user-service/
 ├── order-service/
 ├── payment-service/
-├── logistics-service/
-└── integration-service/
+├── shipping-service/
+├── notification-service/
+├── provider-integration-service/
+└── analytics-service/
 ```
 
-## Detalle de Microservicios Consolidados
+## Detalle de Microservicios
 
 ### catalog-service
 **Responsabilidad**: Gestión unificada del catálogo de productos
 - Agregación de productos de múltiples proveedores
 - Búsqueda y filtrado avanzado
 - Cache distribuido para rendimiento
-- Sincronización con integration-service
+- Sincronización con provider-integration-service
 
-### commerce-service
-**Responsabilidad**: Gestión del carrito de compras e inventario
-- **Carrito**: Creación y gestión de carritos por usuario
-- **Carrito**: Aplicación de cupones y descuentos
-- **Carrito**: Cálculo de totales e impuestos
-- **Inventario**: Gestión de stock en tiempo real
-- **Inventario**: Reserva temporal de productos
-- **Inventario**: Alertas de stock bajo
-- **Analytics**: Reportes de ventas y métricas de negocio
+### cart-service
+**Responsabilidad**: Gestión del carrito de compras
+- Creación y gestión de carritos por usuario
+- Aplicación de cupones y descuentos
+- Cálculo de totales e impuestos
+- Persistencia temporal de carritos
+
+### inventory-service
+**Responsabilidad**: Control de inventario y stock
+- Gestión de stock en tiempo real
+- Reserva temporal de productos
+- Sincronización con proveedores
+- Alertas de stock bajo
 
 ### user-service
 **Responsabilidad**: Gestión de usuarios y autenticación
@@ -60,7 +67,7 @@ services/
 **Responsabilidad**: Procesamiento de pedidos
 - Orquestación del flujo de compra
 - Estados de pedido (pendiente, confirmado, enviado, entregado)
-- Integración con payment-service y logistics-service
+- Integración con payment-service y shipping-service
 - Historial de pedidos
 
 ### payment-service
@@ -70,22 +77,33 @@ services/
 - Procesamiento de reembolsos
 - Cumplimiento PCI-DSS
 
-### logistics-service
-**Responsabilidad**: Gestión de envíos y notificaciones
-- **Envíos**: Cálculo de costos de envío
-- **Envíos**: Integración con transportistas
-- **Envíos**: Seguimiento de paquetes
-- **Notificaciones**: Envío de emails transaccionales
-- **Notificaciones**: Notificaciones SMS y push
-- **Notificaciones**: Gestión de plantillas
+### shipping-service
+**Responsabilidad**: Gestión de envíos
+- Cálculo de costos de envío
+- Integración con transportistas
+- Seguimiento de paquetes
+- Gestión de direcciones de entrega
 
-### integration-service
-**Responsabilidad**: Integraciones externas y proveedores
+### notification-service
+**Responsabilidad**: Notificaciones multicanal
+- Envío de emails transaccionales
+- Notificaciones SMS
+- Push notifications
+- Gestión de plantillas
+
+### provider-integration-service
+**Responsabilidad**: Integración con proveedores
 - Adaptadores para CSV, XML, API REST
-- Sincronización de catálogos de proveedores
+- Sincronización de catálogos
 - Actualización de precios y stock
-- Integración con servicios de terceros (cupones, descuentos)
-- Gestión de múltiples formatos de datos
+- Gestión de múltiples formatos
+
+### analytics-service
+**Responsabilidad**: Reportes y análisis
+- Agregación de datos de ventas
+- Reportes por categoría, proveedor, región
+- Métricas de negocio
+- Dashboards para marketing y finanzas
 
 ## Clean Architecture por Microservicio
 
@@ -124,7 +142,7 @@ microservice-name/
 └── README.md
 ```
 
-### Ejemplo: commerce-service con Clean Architecture
+### Ejemplo: service con Clean Architecture
 
 #### Domain Layer
 #### Application Layer
@@ -147,11 +165,10 @@ microservice-name/
 ## Patrones Implementados
 
 1. **Hexagonal Architecture**: Separación clara entre dominio e infraestructura
-2. **CQRS**: Separación de comandos y consultas en servicios críticos
-3. **Event Sourcing**: Para auditoría en order-service y payment-service
-4. **Saga Pattern**: Transacciones distribuidas para el flujo de compra
-5. **Circuit Breaker**: Resiliencia en llamadas entre servicios
-6. **API Gateway**: Punto de entrada único para clientes externos
+2. **Event Sourcing**: Para auditoría en order-service y payment-service
+3. **Saga Pattern**: Transacciones distribuidas para el flujo de compra
+4. **Circuit Breaker**: Resiliencia en llamadas entre servicios
+5. **API Gateway**: Punto de entrada único para clientes externos
 
 ## Tecnologías por Capa
 
