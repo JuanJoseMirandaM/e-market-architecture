@@ -1,7 +1,9 @@
 # OpenMarket Corp - E-Market Multiplataforma
 
 ## 1.- Hoja de trabajo con la priorización de características de arquitectura
+![Source](https://i.imgur.com/ODfr6Fs.png)
 ## 2.- Estilo arquitectónico seleccionado
+![Source](https://i.imgur.com/QLYEHxh.png)
 ## 3.- Diagramas C4
 ### Diagrama C4 - Nivel 1: Contexto del Sistema
 ### Diagrama C4 - Nivel 2: Contenedores
