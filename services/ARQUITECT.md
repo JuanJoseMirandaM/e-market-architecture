@@ -57,8 +57,11 @@ Distancia moderadamente baja, beneficiada por su alta cohesión.
 - Acoplamiento significativo (A ≈ 0.5) como servicio central  
 **Distancia**: Mayor separación de la secuencia ideal, funcionando como nodo de interconexión.
 
-**Cálculo**:  
-$ DMS = \sqrt{(1 - 0.7)^2 + 0.5^2} = \sqrt{0.09 + 0.25} \approx 0.58 $
+**Cálculo**: 
+```math 
+DMS = \sqrt{(1 - 0.7)^2 + 0.5^2} = \sqrt{0.09 + 0.25} \approx 0.58
+```
+
 **Interpretación**:  
 Mayor distancia debido a cohesión reducida y acoplamiento significativo.
 
