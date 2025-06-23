@@ -18,19 +18,19 @@
 ## 5.-  Diagrama de clases a elección
 
 ### cart_db
-![Source](https://imgur.com/a/fXm2a5P#F69ogPr.png)
+![Source](https://i.imgur.com/F69ogPr.png)
 
 ### inventory_db
-![Source](https://imgur.com/a/fXm2a5P#yjFgn3i.png)
+![Source](https://i.imgur.com/yjFgn3i.png)
 
 ### user_db
-![Source](https://imgur.com/a/fXm2a5P#tI83gj5.png)
+![Source](https://i.imgur.com/tI83gj5.png)
 
 ### order_db
-![Source](https://imgur.com/a/fXm2a5P#BMqmFUd.png)
+![Source](https://i.imgur.com/BMqmFUd.png)
 
 ### payment_db
-![Source](https://imgur.com/a/fXm2a5P#UCELWRk.png)
+![Source](https://i.imgur.com/UCELWRk.png)
 
 
 ## 6.-  Distancia desde la secuencia principal
