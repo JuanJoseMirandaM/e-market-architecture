@@ -18,19 +18,19 @@
 ## 5.-  Diagrama de clases a elección
 
 ### cart_db
-![Source](https://i.imgur.com/a/fXm2a5P#F69ogPr.png)
+![Source](https://imgur.com/a/fXm2a5P#F69ogPr.png)
 
 ### inventory_db
-![Source](https://i.imgur.com/a/fXm2a5P#yjFgn3i.png)
+![Source](https://imgur.com/a/fXm2a5P#yjFgn3i.png)
 
 ### user_db
-![Source](https://i.imgur.com/a/fXm2a5P#tI83gj5.png)
+![Source](https://imgur.com/a/fXm2a5P#tI83gj5.png)
 
 ### order_db
-![Source](https://i.imgur.com/a/fXm2a5P#BMqmFUd.png)
+![Source](https://imgur.com/a/fXm2a5P#BMqmFUd.png)
 
 ### payment_db
-![Source](https://i.imgur.com/a/fXm2a5P#UCELWRk.png)
+![Source](https://imgur.com/a/fXm2a5P#UCELWRk.png)
 
 
 ## 6.-  Distancia desde la secuencia principal
@@ -43,8 +43,11 @@ El análisis de distancia desde la secuencia principal evalúa cómo los compone
 - Acoplamiento moderado (A ≈ 0.4) por su dependencia de inventory_db  
 **Distancia**: Relativamente cercana a la secuencia principal, con ligero alejamiento por la dependencia de inventario.
 
-**Cálculo**:  
-$ DMS = \sqrt{(1 - 0.9)^2 + 0.4^2} = \sqrt{0.01 + 0.16} \approx 0.41 $ 
+**Cálculo**: 
+```math 
+DMS = \sqrt{(1 - 0.9)^2 + 0.4^2} = \sqrt{0.01 + 0.16} \approx 0.41
+```
+
 **Interpretación**:  
 Distancia moderadamente baja, beneficiada por su alta cohesión.
 
@@ -66,7 +69,10 @@ Mayor distancia debido a cohesión reducida y acoplamiento significativo.
 **Distancia**: Entre las más cercanas al ideal, con oportunidad de mejora en el modelo de roles.
 
 **Cálculo**:  
-$ DMS = \sqrt{(1 - 0.8)^2 + 0.3^2} = \sqrt{0.04 + 0.09} \approx 0.36 $
+```math
+DMS = \sqrt{(1 - 0.8)^2 + 0.3^2} = \sqrt{0.04 + 0.09} \approx 0.36
+```
+
 **Interpretación**:  
 Tercera mejor posición, con bajo acoplamiento como factor clave.
 
@@ -77,7 +83,9 @@ Tercera mejor posición, con bajo acoplamiento como factor clave.
 **Distancia**: Compensación interesante - alta cohesión contra mayor acoplamiento operacional.
 
 **Cálculo**:  
-$ DMS = \sqrt{(1 - 0.9)^2 + 0.6^2} = \sqrt{0.01 + 0.36} \approx 0.61 $ 
+```math
+DMS = \sqrt{(1 - 0.9)^2 + 0.6^2} = \sqrt{0.01 + 0.36} \approx 0.61
+```
 **Interpretación**:  
 Máxima distancia del sistema, donde su alto acoplamiento pesa más que su buena cohesión.
 
@@ -87,7 +95,9 @@ Máxima distancia del sistema, donde su alto acoplamiento pesa más que su buena
 - Acoplamiento controlado (A ≈ 0.5) solo con order_db  
 **Distancia**: Arquitectura óptima, modelo de referencia cercano al ideal teórico.
 
-**Cálculo**:  
-$ DMS = \sqrt{(1 - 1.0)^2 + 0.5^2} = \sqrt{0 + 0.25} = 0.5 $
+**Cálculo**: 
+```math 
+DMS = \sqrt{(1 - 1.0)^2 + 0.5^2} = \sqrt{0 + 0.25} = 0.5
+```
 **Interpretación**:  
 Cohesión perfecta compensa su acoplamiento medio, ubicándolo en posición intermedia.
