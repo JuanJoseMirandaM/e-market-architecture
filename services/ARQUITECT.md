@@ -6,12 +6,20 @@
 ![Source](https://i.imgur.com/QLYEHxh.png)
 ## 3.- Diagramas C4
 ### Diagrama C4 - Nivel 1: Contexto del Sistema
-![Source](https://i.postimg.cc/6qqL9z5c/diagrama1-C4.png)
-### Diagrama C4 - Nivel 2: Contenedores
-![Source](https://i.postimg.cc/wMr53J1p/diagrama2-C4.png)
-### Diagrama C4 - Nivel 3: Componentes
-![Source](https://i.postimg.cc/Hxp9Ndqf/diagrama3-C4.png)
 
+[//]: # (![Source]&#40;https://i.postimg.cc/6qqL9z5c/diagrama1-C4.png&#41;)
+![Source](https://i.imgur.com/lSOpI6f.png)
+### Diagrama C4 - Nivel 2: Contenedores
+
+[//]: # (![Source]&#40;https://i.postimg.cc/wMr53J1p/diagrama2-C4.png&#41;)
+![Source](https://i.imgur.com/tgdRmDS.png)
+### Diagrama C4 - Nivel 3: Componentes
+
+[//]: # (![Source]&#40;https://i.postimg.cc/Hxp9Ndqf/diagrama3-C4.png&#41;)
+![Source](https://i.imgur.com/LldWwVH.png)
+API Application
+![Source](https://i.imgur.com/lO6KDs4.png)
+Component OrderService
 ## 4.-  Repositorio con la organización del código
 ![Source](https://i.imgur.com/tTFKAdf.png)
 
